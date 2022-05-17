@@ -1,9 +1,6 @@
 import React from "react";
 
 import {
-  StyledAboutContainer,
-  StyledAboutTitle,
-  StyledAboutSubtitle,
   StyledAboutGrid,
   StyledFigure,
   StyledImage,
@@ -13,16 +10,17 @@ import {
   StyledAboutContentList,
 } from "./styles";
 
-import aboutImage from "../../assets/About.jpg";
+import { SectionContainer } from "../Sections";
+import { SectionSubtitle, SectionTitle } from "../../components/Titles";
 import { AboutListItem } from "../../components/About";
+
+import aboutImage from "../../assets/About.jpg";
 
 const AboutContainer = () => {
   return (
-    <StyledAboutContainer id="about-us">
-      <StyledAboutTitle>Nosotros</StyledAboutTitle>
-      <StyledAboutSubtitle>
-        Cuenta con nosotros crear todos tus productos digitales
-      </StyledAboutSubtitle>
+    <SectionContainer id="about-us">
+      <SectionTitle label="Nosotros" />
+      <SectionSubtitle label="Cuenta con nosotros crear todos tus productos digitales" />
       <StyledAboutGrid>
         <StyledFigure>
           <StyledImage src={aboutImage} alt="" />
@@ -42,7 +40,7 @@ const AboutContainer = () => {
           </StyledAboutContentList>
         </StyledAboutContent>
       </StyledAboutGrid>
-    </StyledAboutContainer>
+    </SectionContainer>
   );
 };
 

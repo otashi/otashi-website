@@ -1,23 +1,5 @@
 import styled from "styled-components";
 
-const StyledAboutContainer = styled.section`
-  margin: 100px 0;
-`;
-
-const StyledAboutTitle = styled.h2`
-  font-size: 16px;
-  font-weight: normal;
-  color: darkslategray;
-`;
-
-const StyledAboutSubtitle = styled.p`
-  font-size: 32px;
-  font-weight: bold;
-  max-width: 60%;
-  line-height: 44px;
-  text-transform: capitalize;
-`;
-
 const StyledAboutGrid = styled.div`
   display: grid;
   grid-template-columns: auto 1fr;
@@ -54,9 +36,6 @@ const StyledAboutContentList = styled.ul`
 `;
 
 export {
-  StyledAboutContainer,
-  StyledAboutTitle,
-  StyledAboutSubtitle,
   StyledAboutGrid,
   StyledFigure,
   StyledImage,
