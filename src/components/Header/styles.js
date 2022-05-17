@@ -4,7 +4,7 @@ const StyledHeader = styled.header`
   position: sticky;
   top: 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 `;
 
 const StyledImg = styled.img`
