@@ -16,7 +16,7 @@ import { AboutListItem } from "../../components/About";
 
 import aboutImage from "../../assets/About.jpg";
 
-const AboutContainer = () => {
+const AboutSection = () => {
   return (
     <SectionContainer id="about-us">
       <SectionTitle label="Nosotros" />
@@ -44,4 +44,4 @@ const AboutContainer = () => {
   );
 };
 
-export { AboutContainer };
+export { AboutSection };
