@@ -10,7 +10,7 @@ import {
   StyledAboutContentList,
 } from "./styles";
 
-import { SectionContainer } from "../Sections";
+import { SectionContainer } from "../../containers/Sections";
 import { SectionSubtitle, SectionTitle } from "../../components/Titles";
 import { AboutListItem } from "../../components/About";
 
