@@ -5,6 +5,7 @@ const StyledHeader = styled.header`
   top: 0;
   display: flex;
   justify-content: space-between;
+  background-color: white;
 `;
 
 const StyledImg = styled.img`
