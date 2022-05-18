@@ -4,15 +4,20 @@ const StyledHeader = styled.header`
   position: sticky;
   height: 100px;
   top: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: white;
+  background-color: var(--n900);
 `;
 
-const StyledImg = styled.img`
-  scale: 0.6;
+const StyledHeaderContainer = styled.div`
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-between;
+  align-items: center;
 `;
+
+const StyledImg = styled.img``;
 
 const StyledNav = styled.nav``;
 
@@ -24,22 +29,16 @@ const StyledList = styled.ul`
   margin: 0;
 `;
 
-const StyledListItem = styled.li`
-  padding-bottom: 14px;
-
-  &:hover {
-    padding-bottom: 13px;
-    border-bottom: 1px solid black;
-  }
-`;
+const StyledListItem = styled.li``;
 
 const StyledAnchor = styled.a`
+  color: var(--n10);
   text-decoration: none;
-  color: black;
 `;
 
 export {
   StyledHeader,
+  StyledHeaderContainer,
   StyledImg,
   StyledNav,
   StyledList,
