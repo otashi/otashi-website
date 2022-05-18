@@ -20,7 +20,7 @@ const AboutSection = () => {
   return (
     <SectionContainer id="about-us">
       <SectionTitle label="Nosotros" />
-      <SectionSubtitle label="Cuenta con nosotros crear todos tus productos digitales" />
+      <SectionSubtitle label="Cuenta con nosotros para crear todos tus productos digitales" />
       <StyledAboutGrid>
         <StyledFigure>
           <StyledImage src={aboutImage} alt="" />
