@@ -2,7 +2,9 @@
 
 :root {
   --t100: #79e2f2;
+  --t200: #00c7e6;
   --n10: #fafbfc;
+  --n40: #dfe1e6;
   --n900: #091e42;
 }
 
@@ -13,9 +15,10 @@ html {
 
 body {
   margin: 0 auto;
+  background-color: var(--n10);
 }
 
 main {
   max-width: 1000px;
-  margin: 32px auto;
+  margin: 0 auto;
 }
