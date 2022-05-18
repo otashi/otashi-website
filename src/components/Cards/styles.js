@@ -4,14 +4,15 @@ const StyledServiceCard = styled.div`
   width: 250px;
   height: 200px;
   padding: 28px;
-  border: 1px solid gray;
-  border-radius: 16px;
   display: grid;
   row-gap: 32px;
+  border: 1px solid var(--n50);
+  border-radius: 16px;
+  background-color: var(--n20);
 
   &:hover {
-    background-color: lightcoral;
-    border: none;
+    border-color: var(--t500);
+    background-color: var(--t50);
   }
 `;
 
@@ -33,10 +34,10 @@ const StyledServiceCardAction = styled.a`
   font-weight: bold;
   display: inline;
   width: 64px;
-  color: black;
+  color: var(--n900);
   padding-bottom: 4px;
   text-decoration: none;
-  border-bottom: 2px solid black;
+  border-bottom: 2px solid var(--n900);
   transition: width 1s ease;
 
   &:hover {
