@@ -5,12 +5,12 @@ import {
   StyledIntroTextContainer,
   StyledIntroTitle,
   StyledIntroSubtitle,
-  StyledIntroAnchor,
   StyledIntroFigure,
   StyledIntroImage,
 } from "./styles";
 
 import heroImage from "../../assets/Hero.png";
+import { AnchorButton } from "../../components/Buttons";
 
 const IntroContainer = () => {
   return (
@@ -20,7 +20,7 @@ const IntroContainer = () => {
         <StyledIntroSubtitle>
           Impulsamos tu misión en medios digitales
         </StyledIntroSubtitle>
-        <StyledIntroAnchor href="#contact">Empecemos</StyledIntroAnchor>
+        <AnchorButton label="Contáctanos" href="#contact" />
       </StyledIntroTextContainer>
       <StyledIntroFigure>
         <StyledIntroImage src={heroImage} alt="" />
