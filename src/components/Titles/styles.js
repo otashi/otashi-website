@@ -11,7 +11,17 @@ const StyledSectionSubtitle = styled.p`
   font-weight: bold;
   max-width: 60%;
   line-height: 44px;
-  text-transform: capitalize;
+
+  @media screen and (max-width: 750px) {
+    max-width: 100%;
+    font-size: 24px;
+    line-height: 34px;
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: 16px;
+    line-height: 24px;
+  }
 `;
 
 export { StyledSectionTitle, StyledSectionSubtitle };
