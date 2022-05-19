@@ -1,13 +1,13 @@
 import React from "react";
 
-import { StyledLogo, StyledFooterLogo } from "./styles";
+import { StyledHeaderLogo, StyledFooterLogo } from "./styles";
 
-const Logo = ({ px }) => {
-  return <StyledLogo px={px}>Otashi</StyledLogo>;
+const HeaderLogo = ({ px }) => {
+  return <StyledHeaderLogo px={px}>Otashi</StyledHeaderLogo>;
 };
 
 const FooterLogo = ({ px }) => {
   return <StyledFooterLogo px={px}>Otashi</StyledFooterLogo>;
 };
 
-export { Logo, FooterLogo };
+export { HeaderLogo, FooterLogo };
