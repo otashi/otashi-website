@@ -24,6 +24,11 @@ const StyledAnchorButton = styled.a`
   color: white;
   text-decoration: none;
   box-shadow: 1px 2px 3px 1px var(--n40);
+
+  @media screen and (max-width: 550px) {
+    width: 120px;
+    padding: 8px 16px;
+  }
 `;
 
 export { StyledButton, StyledAnchorButton };
