@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledIntroContainer = styled.section`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  margin: 90px 0 0;
+  padding: 90px 0 0;
   color: var(--n900);
 `;
 

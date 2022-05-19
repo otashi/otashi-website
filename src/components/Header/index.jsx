@@ -15,7 +15,9 @@ const Header = () => {
   return (
     <StyledHeader>
       <StyledHeaderContainer>
-        <Logo px="42" />
+        <StyledAnchor href="#intro">
+          <Logo px="42" />
+        </StyledAnchor>
         <StyledNav>
           <StyledList>
             <StyledListItem>
