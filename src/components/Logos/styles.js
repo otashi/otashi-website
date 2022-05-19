@@ -6,4 +6,8 @@ const StyledLogo = styled.i`
   font-style: normal;
 `;
 
-export { StyledLogo };
+const StyledFooterLogo = styled(StyledLogo)`
+  color: var(--n100);
+`;
+
+export { StyledLogo, StyledFooterLogo };
