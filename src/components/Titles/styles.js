@@ -12,7 +12,7 @@ const StyledSectionSubtitle = styled.p`
   max-width: 60%;
   line-height: 44px;
 
-  @media screen and (max-width: 750px) {
+  @media screen and (max-width: 850px) {
     max-width: 100%;
     font-size: 24px;
     line-height: 34px;
