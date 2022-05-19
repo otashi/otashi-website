@@ -4,6 +4,7 @@ import { Header } from "./components/Header/";
 import { IntroContainer } from "./sections/Intro";
 import { AboutSection } from "./sections/About";
 import { ServicesSection } from "./sections/Services";
+import { ContactSection } from "./sections/Contact";
 
 function App() {
   return (
@@ -11,10 +12,9 @@ function App() {
       <Header />
       <main>
         <IntroContainer />
-        <AboutSection id="about-us" />
+        <AboutSection />
         <ServicesSection />
-        <section id="value-proposition"></section>
-        <section id="contact"></section>
+        <ContactSection />
       </main>
       <footer>
         <img src="" alt="Otashi" />
