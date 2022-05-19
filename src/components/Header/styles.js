@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledHeader = styled.header`
   position: sticky;
-  height: 100px;
+  height: 80px;
   top: 0;
   background-color: var(--n900);
 `;
