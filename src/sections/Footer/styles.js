@@ -12,6 +12,10 @@ const StyledFooter = styled.footer`
   @media screen and (max-width: 1200px) {
     margin: 100px 100px 50px;
   }
+
+  @media screen and (max-width: 750px) {
+    margin: 100px 32px 50px;
+  }
 `;
 
 const StyledFooterInfoContainer = styled.div`
