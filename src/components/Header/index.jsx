@@ -25,7 +25,7 @@ const Header = () => {
               <StyledAnchor href="#services">Servicios</StyledAnchor>
             </StyledListItem>
             <StyledListItem>
-              <StyledAnchor href="#contact">Contáctenos</StyledAnchor>
+              <StyledAnchor href="#contact">Contáctanos</StyledAnchor>
             </StyledListItem>
           </StyledList>
         </StyledNav>
