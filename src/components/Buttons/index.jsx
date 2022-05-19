@@ -2,8 +2,12 @@ import React from "react";
 
 import { StyledButton, StyledAnchorButton } from "./styles";
 
-const Button = ({ label, handleClick }) => {
-  return <StyledButton onclick={handleClick}>{label}</StyledButton>;
+const Button = ({ label, type = "button", handleClick }) => {
+  return (
+    <StyledButton type={type} onclick={handleClick}>
+      {label}
+    </StyledButton>
+  );
 };
 
 const AnchorButton = ({ label, href }) => {
