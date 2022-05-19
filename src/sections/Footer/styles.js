@@ -8,6 +8,10 @@ const StyledFooter = styled.footer`
   border-top: 2px solid var(--n100);
   color: var(--n100);
   max-width: 1000px;
+
+  @media screen and (max-width: 1200px) {
+    margin: 100px 100px 50px;
+  }
 `;
 
 const StyledFooterInfoContainer = styled.div`

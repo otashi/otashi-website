@@ -29,3 +29,9 @@ main {
   max-width: 1000px;
   margin: 0 auto;
 }
+
+@media screen and (max-width: 1200px) {
+  main {
+    margin: 0 100px;
+  }
+}

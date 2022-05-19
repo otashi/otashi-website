@@ -15,6 +15,10 @@ const StyledHeaderContainer = styled.div`
   grid-template-columns: auto auto;
   justify-content: space-between;
   align-items: center;
+
+  @media screen and (max-width: 1200px) {
+    margin: 0 100px;
+  }
 `;
 
 const StyledImg = styled.img``;
