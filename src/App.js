@@ -5,6 +5,7 @@ import { IntroContainer } from "./sections/Intro";
 import { AboutSection } from "./sections/About";
 import { ServicesSection } from "./sections/Services";
 import { ContactSection } from "./sections/Contact";
+import { Footer } from "./sections/Footer";
 
 function App() {
   return (
@@ -16,9 +17,7 @@ function App() {
         <ServicesSection />
         <ContactSection />
       </main>
-      <footer>
-        <img src="" alt="Otashi" />
-      </footer>
+      <Footer />
     </>
   );
 }
