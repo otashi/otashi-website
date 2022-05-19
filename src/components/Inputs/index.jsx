@@ -1,6 +1,6 @@
 import React from "react";
 
-import { StyledInput } from "./styles";
+import { StyledInput, StyledTextArea } from "./styles";
 
 const Input = ({ type, placeholder, required = false }) => {
   return (
@@ -8,4 +8,8 @@ const Input = ({ type, placeholder, required = false }) => {
   );
 };
 
-export { Input };
+const TextArea = ({ placeholder, required = false }) => {
+  return <StyledTextArea placeholder={placeholder} required={required} />;
+};
+
+export { Input, TextArea };
