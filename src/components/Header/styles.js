@@ -5,6 +5,10 @@ const StyledHeader = styled.header`
   height: 80px;
   top: 0;
   background-color: var(--n900);
+
+  @media screen and (max-width: 500px) {
+    height: 60px;
+  }
 `;
 
 const StyledHeaderContainer = styled.div`
@@ -19,11 +23,19 @@ const StyledHeaderContainer = styled.div`
   @media screen and (max-width: 1200px) {
     margin: 0 100px;
   }
+
+  @media screen and (max-width: 750px) {
+    margin: 0 32px;
+  }
 `;
 
 const StyledImg = styled.img``;
 
-const StyledNav = styled.nav``;
+const StyledNav = styled.nav`
+  @media screen and (max-width: 500px) {
+    display: none;
+  }
+`;
 
 const StyledList = styled.ul`
   display: flex;

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Logo } from "../Logos";
+import { HeaderLogo } from "../Logos";
 
 import {
   StyledHeader,
@@ -16,7 +16,7 @@ const Header = () => {
     <StyledHeader>
       <StyledHeaderContainer>
         <StyledAnchor href="#intro">
-          <Logo px="42" />
+          <HeaderLogo />
         </StyledAnchor>
         <StyledNav>
           <StyledList>
