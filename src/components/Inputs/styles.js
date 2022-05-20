@@ -6,6 +6,7 @@ const StyledInput = styled.input`
   background-color: transparent;
   border: none;
   border-bottom: 1px solid var(--n90);
+  border-radius: 0;
 
   &:focus {
     outline: none;
@@ -15,7 +16,12 @@ const StyledInput = styled.input`
   }
 
   &::placeholder {
-    color: var(--n900);
+    color: var(--n200);
+  }
+
+  @media screen and (max-width: 550px) {
+    max-width: 350px;
+    width: 300px;
   }
 `;
 
@@ -27,6 +33,7 @@ const StyledTextArea = styled.textarea`
   line-height: 11px;
   border: none;
   border-bottom: 1px solid var(--n90);
+  border-radius: 0;
   background-color: transparent;
   resize: none;
 
@@ -38,7 +45,13 @@ const StyledTextArea = styled.textarea`
   }
 
   &::placeholder {
-    color: var(--n900);
+    color: var(--n200);
+    padding: 0;
+  }
+
+  @media screen and (max-width: 550px) {
+    max-width: 350px;
+    width: 300px;
   }
 `;
 
