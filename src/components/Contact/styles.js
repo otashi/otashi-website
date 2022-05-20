@@ -4,10 +4,19 @@ const StyledContactData = styled.div`
   display: flex;
   flex-direction: column;
   gap: 24px;
+
+  @media screen and (max-width: 550px) {
+    flex-direction: row;
+    align-items: flex-start;
+  }
 `;
 
 const StyledIcon = styled.img`
   width: 32px;
+
+  @media screen and (max-width: 550px) {
+    width: 24px;
+  }
 `;
 
 const StyledContactInfo = styled.div``;
