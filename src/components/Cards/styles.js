@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const StyledServiceCard = styled.div`
+const StyledServiceCard = styled.a`
   width: 250px;
   height: 200px;
   padding: 28px;
@@ -9,6 +9,8 @@ const StyledServiceCard = styled.div`
   border: 1px solid var(--n50);
   border-radius: 16px;
   background-color: var(--n20);
+  text-decoration: none;
+  color: var(--n900);
 
   &:hover {
     border-color: var(--t500);
