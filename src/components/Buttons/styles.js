@@ -6,11 +6,13 @@ const StyledButton = styled.button`
   border-radius: 4px;
   border: none;
   text-align: center;
+  font-size: 16px;
   display: inline;
   background-color: var(--t200);
   color: white;
   text-decoration: none;
   box-shadow: 1px 2px 3px 1px var(--n40);
+  cursor: pointer;
 `;
 
 const StyledAnchorButton = styled.a`
