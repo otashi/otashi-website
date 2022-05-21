@@ -18,15 +18,13 @@ const ServiceCard = ({ icon, label, description, cta }) => {
   };
 
   return (
-    <StyledServiceCard>
+    <StyledServiceCard href="#contact" onClick={handleClick}>
       <StyledServiceCardContent>
         <StyledServiceIcon src={icon} alt="" />
         <StyledServiceName>{label}</StyledServiceName>
         <StyledServiceDescription>{description}</StyledServiceDescription>
       </StyledServiceCardContent>
-      <StyledServiceCardAction href="#contact" onClick={handleClick}>
-        {cta}
-      </StyledServiceCardAction>
+      <StyledServiceCardAction>{cta}</StyledServiceCardAction>
     </StyledServiceCard>
   );
 };
