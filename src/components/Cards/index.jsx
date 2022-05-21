@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext } from "react";
+import { AppContext } from "../../context/context";
 
 import {
   StyledServiceCard,
@@ -10,6 +11,12 @@ import {
 } from "./styles";
 
 const ServiceCard = ({ icon, label, description, cta }) => {
+  const { formData, setFormData } = useContext(AppContext);
+
+  const handleClick = () => {
+    setFormData({ ...formData, service: label });
+  };
+
   return (
     <StyledServiceCard>
       <StyledServiceCardContent>
@@ -17,7 +24,9 @@ const ServiceCard = ({ icon, label, description, cta }) => {
         <StyledServiceName>{label}</StyledServiceName>
         <StyledServiceDescription>{description}</StyledServiceDescription>
       </StyledServiceCardContent>
-      <StyledServiceCardAction href="#contact">{cta}</StyledServiceCardAction>
+      <StyledServiceCardAction href="#contact" onClick={handleClick}>
+        {cta}
+      </StyledServiceCardAction>
     </StyledServiceCard>
   );
 };
