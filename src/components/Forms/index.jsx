@@ -13,8 +13,12 @@ const ContactForm = () => {
     setFormData({ ...formData, [payload]: target.value });
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+  };
+
   return (
-    <StyledForm>
+    <StyledForm onSubmit={handleSubmit}>
       <Input
         type="text"
         handleChange={handleChange}
