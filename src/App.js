@@ -1,5 +1,7 @@
 import "./globals.css";
 
+import { AppContextProvider } from "./context/context";
+
 import { Header } from "./components/Header/";
 import { IntroContainer } from "./sections/Intro";
 import { AboutSection } from "./sections/About";
@@ -9,7 +11,7 @@ import { Footer } from "./sections/Footer";
 
 function App() {
   return (
-    <>
+    <AppContextProvider>
       <Header />
       <main>
         <IntroContainer />
@@ -18,7 +20,7 @@ function App() {
         <ContactSection />
       </main>
       <Footer />
-    </>
+    </AppContextProvider>
   );
 }
 
