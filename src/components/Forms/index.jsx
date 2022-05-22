@@ -6,6 +6,8 @@ import { Input, TextArea } from "../Inputs";
 
 import { StyledForm, StyledTextArea, StyledButton } from "./styles";
 
+const EMAIL_API = "https://formsubmit.co/ajax/help@otashi.digital";
+
 const ContactForm = () => {
   const { formData, setFormData } = useContext(AppContext);
 
@@ -13,8 +15,32 @@ const ContactForm = () => {
     setFormData({ ...formData, [payload]: target.value });
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
+
+    const response = await fetch(EMAIL_API, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        subject: formData.email,
+        message: `Phone: ${formData.phone} - Service: ${formData.service} \nComment: ${formData.comment}`,
+        _template: "table",
+      }),
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      const fields = Object.keys(formData);
+      const newState = {};
+      fields.forEach((field) => {
+        newState[field] = "";
+      });
+
+      setFormData(newState);
+    }
   };
 
   return (
