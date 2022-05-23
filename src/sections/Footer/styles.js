@@ -16,6 +16,12 @@ const StyledFooter = styled.footer`
   @media screen and (max-width: 750px) {
     margin: 100px 32px 50px;
   }
+
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
 `;
 
 const StyledFooterInfoContainer = styled.div`
