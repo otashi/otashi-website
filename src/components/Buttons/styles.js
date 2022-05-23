@@ -13,6 +13,11 @@ const StyledButton = styled.button`
   text-decoration: none;
   box-shadow: 1px 2px 3px 1px var(--n40);
   cursor: pointer;
+
+  @media screen and (max-width: 550px) {
+    width: 120px;
+    padding: 8px 16px;
+  }
 `;
 
 const StyledSubmitButton = styled.button`
@@ -48,6 +53,10 @@ const StyledSubmitButton = styled.button`
   text-decoration: none;
   box-shadow: 1px 2px 3px 1px var(--n40);
   cursor: pointer;
+
+  @media screen and (max-width: 550px) {
+    padding: 8px 16px;
+  }
 `;
 
 const rotate = keyframes`
