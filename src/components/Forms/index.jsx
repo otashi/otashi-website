@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/context";
 
-import { Button } from "../Buttons";
+import { SubmitButton } from "../Buttons";
 import { Input, TextArea } from "../Inputs";
 
 import { StyledForm, StyledTextArea, StyledButton } from "./styles";
@@ -10,37 +10,57 @@ const EMAIL_API = "https://formsubmit.co/ajax/help@otashi.digital";
 
 const ContactForm = () => {
   const { formData, setFormData } = useContext(AppContext);
+  const [status, setStatus] = useState("");
 
   const handleChange = ({ target }, payload) => {
     setFormData({ ...formData, [payload]: target.value });
   };
 
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-
-    const response = await fetch(EMAIL_API, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name: formData.name,
-        subject: formData.email,
-        message: `Phone: ${formData.phone} - Service: ${formData.service} \nComment: ${formData.comment}`,
-        _template: "table",
-      }),
+  const resetFormData = () => {
+    const fields = Object.keys(formData);
+    const newState = {};
+    fields.forEach((field) => {
+      newState[field] = "";
     });
 
-    const data = await response.json();
-    if (data.success) {
-      const fields = Object.keys(formData);
-      const newState = {};
-      fields.forEach((field) => {
-        newState[field] = "";
+    setFormData(newState);
+  };
+
+  const resetStatus = () => {
+    setStatus("");
+  };
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+    setStatus("loading");
+
+    try {
+      const response = await fetch(EMAIL_API, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          subject: formData.email,
+          message: `Phone: ${formData.phone} - Service: ${formData.service} \nComment: ${formData.comment}`,
+          _template: "table",
+        }),
       });
 
-      setFormData(newState);
+      const data = await response.json();
+      if (data.success) {
+        setStatus("success");
+      } else {
+        setStatus("error");
+      }
+    } catch (e) {
+      console.error(e);
+      setStatus("error");
     }
+
+    setTimeout(resetStatus, 4000);
+    resetFormData();
   };
 
   return (
@@ -82,7 +102,7 @@ const ContactForm = () => {
         />
       </StyledTextArea>
       <StyledButton>
-        <Button label="Enviar" type="submit" />
+        <SubmitButton label="Enviar" type="submit" status={status} />
       </StyledButton>
     </StyledForm>
   );
