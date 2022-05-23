@@ -71,6 +71,7 @@ const ContactForm = () => {
         value={formData.name}
         id="name"
         placeholder="Nombre"
+        required={true}
       />
       <Input
         type="text"
@@ -78,6 +79,7 @@ const ContactForm = () => {
         handleChange={handleChange}
         id="phone"
         placeholder="Teléfono"
+        required={true}
       />
       <Input
         type="email"
@@ -85,6 +87,7 @@ const ContactForm = () => {
         handleChange={handleChange}
         id="email"
         placeholder="Correo electrónico"
+        required={true}
       />
       <Input
         type="text"
@@ -92,6 +95,7 @@ const ContactForm = () => {
         handleChange={handleChange}
         id="service"
         placeholder="Servicio"
+        required={true}
       />
       <StyledTextArea>
         <TextArea
@@ -99,6 +103,7 @@ const ContactForm = () => {
           handleChange={handleChange}
           id="comment"
           placeholder="Cuéntanos sobre tu proyecto"
+          required={true}
         />
       </StyledTextArea>
       <StyledButton>
