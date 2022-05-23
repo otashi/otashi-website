@@ -1,6 +1,21 @@
 import styled, { keyframes } from "styled-components";
 
 const StyledButton = styled.button`
+  width: 150px;
+  background-color: var(--t200);
+  padding: 16px 8px;
+  border-radius: 4px;
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  display: inline;
+  color: white;
+  text-decoration: none;
+  box-shadow: 1px 2px 3px 1px var(--n40);
+  cursor: pointer;
+`;
+
+const StyledSubmitButton = styled.button`
   transition: width 0.5s ease-out;
   width: ${({ status }) => {
     if (status === "" || status === "loading") {
@@ -69,4 +84,9 @@ const StyledAnchorButton = styled.a`
   }
 `;
 
-export { StyledButton, StyledButtonIcon, StyledAnchorButton };
+export {
+  StyledButton,
+  StyledSubmitButton,
+  StyledButtonIcon,
+  StyledAnchorButton,
+};
