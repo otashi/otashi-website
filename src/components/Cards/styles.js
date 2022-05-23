@@ -67,7 +67,7 @@ const StyledServiceDescription = styled.p`
   }
 `;
 
-const StyledServiceCardAction = styled.a`
+const StyledServiceCardAction = styled.p`
   font-weight: bold;
   display: inline;
   align-self: flex-end;
