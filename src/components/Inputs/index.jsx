@@ -34,6 +34,7 @@ const TextArea = ({
       required={required}
       value={value}
       onChange={(event) => handleChange(event, id)}
+      maxLength="260px"
     />
   );
 };
