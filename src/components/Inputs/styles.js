@@ -28,9 +28,10 @@ const StyledInput = styled.input`
 const StyledTextArea = styled.textarea`
   padding-top: 8px;
   width: 100%;
+  height: 80px;
   font-family: Ubuntu, sans-serif;
   font-size: 13.333px;
-  line-height: 11px;
+  line-height: 22px;
   border: none;
   border-bottom: 1px solid var(--n90);
   border-radius: 0;
@@ -52,6 +53,7 @@ const StyledTextArea = styled.textarea`
   @media screen and (max-width: 550px) {
     max-width: 350px;
     width: 300px;
+    height: 120px;
   }
 `;
 
